@@ -9,7 +9,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navbar fixed top-0 w-full bg-white z-50 transition-all duration-500">
+    <nav className="navbar fixed top-0 w-full bg-white z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         <a href="#home" className="text-2xl font-bold text-red-600">DevFolio</a>
         <div className="md:hidden">
@@ -20,7 +20,7 @@ const NavBar = () => {
           </button>
         </div>
         <div
-          className={`fixed top-0 left-0 w-full bg-white z-40 transition-transform transform ${
+          className={`fixed top-0 left-0 w-full h-full bg-white z-40 transition-transform transform ${
             isOpen ? 'translate-y-0' : '-translate-y-full'
           } md:relative md:translate-y-0 md:flex md:items-center md:w-auto`}
         >
