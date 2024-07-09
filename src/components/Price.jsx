@@ -22,7 +22,7 @@ const Price = () => {
                 <div className="price-header py-8 text-center border-b">
                   <h2 className="text-2xl font-bold mb-2">{plan.title}</h2>
                   <h2 className="text-4xl font-bold relative inline-block">
-                    <span className="absolute text-lg top-2 left-0">$</span>{plan.price}<span className="text-lg">/ mo</span>
+                    <span className=" text-lg top-2 left-0">$</span>{plan.price}<span className="text-lg">/ mo</span>
                   </h2>
                 </div>
                 <div className="price-body p-6">

@@ -21,7 +21,7 @@ const About = () => {
               <span className="absolute inset-0 h-0.5 bg-red-600 top-1/2 left-0"></span>
               Learn About Me
             </p>
-            <h2 className="text-4xl font-bold">10 Years Experience</h2>
+            <h2 className="text-4xl font-bold">1 Years Experience</h2>
           </div>
           <p className="text-base mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida
@@ -39,7 +39,7 @@ const About = () => {
               </div>
             ))}
           </div>
-          <a className="btn bg-red-600 text-white hover:bg-transparent hover:text-red-600 border border-red-600 transition-all duration-300" href="#contact">
+          <a className="btn p-2 rounded-md bg-red-600 text-white hover:bg-transparent hover:text-red-600 border border-red-600 transition-all duration-300" href="#contact">
             Learn More
           </a>
         </div>

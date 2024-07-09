@@ -18,7 +18,7 @@ const Review = () => {
                   <img src={review} alt={`Review ${index + 1}`} className="w-24 h-24 rounded-full border-4 border-dotted border-red-600 p-2" />
                 </div>
                 <div className="testimonial-text">
-                  <p className="text-xl italic mb-4">Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.</p>
+                  <p className="text-xl italic mb-4 text-gray-600">Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.</p>
                   <h3 className="text-2xl font-bold text-red-600 mb-2">Customer Name</h3>
                   <h4 className="text-lg text-gray-600">Profession</h4>
                 </div>

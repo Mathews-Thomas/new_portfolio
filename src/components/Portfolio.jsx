@@ -29,7 +29,7 @@ const Portfolio = () => {
                 <img src={image} alt={`Portfolio ${index + 1}`} className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" />
                 <div className="portfolio-text absolute bottom-0 left-0 w-full bg-white p-4 shadow-md transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <h3 className="text-lg font-bold">Portfolio {index + 1}</h3>
-                  <a href={image} className="btn bg-red-600 text-white absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 w-10 h-10 flex items-center justify-center text-2xl">+</a>
+                  <a href={image} className="btn  bg-red-600 text-white absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 w-10 h-10 flex items-center justify-center text-2xl">+</a>
                 </div>
               </div>
             </div>
