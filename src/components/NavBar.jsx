@@ -14,8 +14,8 @@ const NavBar = () => {
         <a href="#home" className="text-2xl font-bold">
           {" "}
           <svg
-            width="40"
-            height="40"
+            width="60"
+            height="60"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

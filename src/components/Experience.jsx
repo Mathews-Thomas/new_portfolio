@@ -1,7 +1,7 @@
 import React from 'react';
 
 const experiences = [
-  { date: '2045 - 2050', title: 'Web Developer', company: 'Soft Agency, San Francisco, CA', description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.' },
+  { date: '2024 - present', title: 'Software Developer', company: 'Ophize ,Kochi India', description: 'Developed Sofware for multiple clients including Ophize,Kochi India' },
   // Add more experiences here
 ];
 

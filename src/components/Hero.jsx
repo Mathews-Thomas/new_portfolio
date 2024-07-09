@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
           <p className="text-2xl font-semibold">I'm</p>
           <h1 className="text-5xl font-bold mb-4">Mathews Thomas</h1>
-          <h2 className="text-3xl font-semibold mb-4">
+          <h2 className="text-xl font-semibold mb-4">
             Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer
           </h2>
           <div className="flex justify-center lg:justify-start space-x-4 mt-6">

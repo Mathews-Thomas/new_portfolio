@@ -2,9 +2,9 @@ import React from 'react';
 
 const Price = () => {
   const plans = [
-    { title: 'Basic', price: 49, features: ['Bootstrap 4', 'Font Awesome 5', 'Responsive Design', 'Browser Compatibility', 'Easy To Use'], featured: false },
-    { title: 'Standard', price: 99, features: ['Bootstrap 4', 'Font Awesome 5', 'Responsive Design', 'Browser Compatibility', 'Easy To Use'], featured: true },
-    { title: 'Premium', price: 149, features: ['Bootstrap 4', 'Font Awesome 5', 'Responsive Design', 'Browser Compatibility', 'Easy To Use'], featured: false }
+    { title: 'Basic', price: 49, features: ['Bootstrap 4', 'React', 'Responsive Design', 'Browser Compatibility', 'Easy To Use'], featured: false },
+    { title: 'Standard', price: 99, features: ['Bootstrap 4', 'React', 'Responsive Design', 'Browser Compatibility', 'Easy To Use'], featured: true },
+    { title: 'Premium', price: 149, features: ['Tailwind CSS', 'React', 'Responsive Design', 'Browser Compatibility', 'Easy To Use'], featured: false }
   ];
 
   return (
