@@ -1,5 +1,6 @@
 import React from 'react';
 import aboutImage from '../assets/img/about.jpg';
+import { motion } from 'framer-motion';
 
 const About = () => {
   const skills = [
@@ -9,40 +10,127 @@ const About = () => {
     { name: 'Apps Development', percentage: 85 }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 0.6,
+        staggerChildren: 0.3
+      } 
+    }
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { 
+      opacity: 1, 
+      scale: 1, 
+      transition: { 
+        duration: 0.8 
+      } 
+    }
+  };
+
+  const skillVariants = {
+    hidden: { width: 0 },
+    visible: (percentage) => ({ 
+      width: `${percentage}%`, 
+      transition: { 
+        duration: 1,
+        ease: 'easeInOut'
+      } 
+    })
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 0.5 
+      } 
+    }
+  };
+
   return (
     <div className="about py-20 bg-gray-100" id="about">
       <div className="container mx-auto flex flex-col lg:flex-row items-center px-6">
-        <div className="w-full lg:w-1/2 p-4 mb-8 lg:mb-0">
+        <motion.div 
+          className="w-full lg:w-1/2 p-4 mb-8 lg:mb-0"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={imageVariants}
+        >
           <img src={aboutImage} alt="About" className="w-full h-auto object-cover rounded-lg shadow-lg" />
-        </div>
-        <div className="w-full lg:w-1/2 p-4">
+        </motion.div>
+        <motion.div 
+          className="w-full lg:w-1/2 p-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
           <div className="section-header mb-6">
-            <p className="text-lg uppercase tracking-wide bg-white inline-block relative px-4 mb-4">
+            <motion.p 
+              className="text-lg uppercase tracking-wide bg-white inline-block relative px-4 mb-4"
+              variants={textVariants}
+            >
               <span className="absolute inset-0 h-0.5 bg-red-600 top-1/2 left-0"></span>
               Learn About Me
-            </p>
-            <h2 className="text-4xl font-bold">1 Years Experience</h2>
+            </motion.p>
+            <motion.h2 
+              className="text-4xl font-bold"
+              variants={textVariants}
+            >
+              1 Years Experience
+            </motion.h2>
           </div>
-          <p className="text-base mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida
-          </p>
+          <motion.p 
+            className="text-base mb-6"
+            variants={textVariants}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida.
+          </motion.p>
           <div className="skills mb-6">
             {skills.map(skill => (
-              <div key={skill.name} className="mb-4">
+              <motion.div 
+                key={skill.name} 
+                className="mb-4"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={skill.percentage}
+                variants={skillVariants}
+              >
                 <div className="flex justify-between mb-1">
-                  <p>{skill.name}</p>
-                  <p>{skill.percentage}%</p>
+                  <motion.p variants={textVariants}>{skill.name}</motion.p>
+                  <motion.p variants={textVariants}>{skill.percentage}%</motion.p>
                 </div>
                 <div className="w-full bg-gray-300 h-2 rounded-full">
-                  <div className="bg-red-600 h-full rounded-full" style={{ width: `${skill.percentage}%` }}></div>
+                  <motion.div 
+                    className="bg-red-600 h-full rounded-full"
+                    custom={skill.percentage}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={skillVariants}
+                  ></motion.div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-          <a className="btn p-2 rounded-md bg-red-600 text-white hover:bg-transparent hover:text-red-600 border border-red-600 transition-all duration-300" href="#contact">
+          <motion.a 
+            className="btn p-2 rounded-md bg-red-600 text-white hover:bg-transparent hover:text-red-600 border border-red-600 transition-all duration-300" 
+            href="#contact"
+            variants={textVariants}
+          >
             Learn More
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white py-10">
       <div className="container mx-auto text-center px-6">
         <h2 className="text-2xl font-bold mb-2">Mathews Thomas</h2>
-        <p className="mb-2">682037,Thuthiyoor,Kakkanad,Kochi</p>
+        <p className="mb-2 capitalize">682037, Kochi</p>
         <div className="footer-menu mb-4">
           <p>7736790251</p>
           <p>mathewsxo@gmail.com</p>
