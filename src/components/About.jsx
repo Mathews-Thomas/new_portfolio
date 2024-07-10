@@ -1,6 +1,7 @@
 import React from 'react';
 import aboutImage from '../assets/img/about.jpg';
 import { motion } from 'framer-motion';
+import { Parallax } from 'react-scroll-parallax';
 
 const About = () => {
   const skills = [
@@ -65,7 +66,9 @@ const About = () => {
           viewport={{ once: true }}
           variants={imageVariants}
         >
-          <img src={aboutImage} alt="About" className="w-full h-auto object-cover rounded-lg shadow-lg" />
+          <Parallax y={[-20, 20]} tagOuter="figure">
+            <img src={aboutImage} alt="About" className="w-full h-auto object-cover rounded-lg shadow-lg" />
+          </Parallax>
         </motion.div>
         <motion.div 
           className="w-full lg:w-1/2 p-4"

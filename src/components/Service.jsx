@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaLaptop, FaLaptopCode, FaAndroid, FaApple } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { Parallax } from 'react-scroll-parallax';
 
 const services = [
   { icon: <FaLaptop />, title: 'Web Design', description: 'Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non' },
@@ -40,21 +41,23 @@ const Service = () => {
               viewport={{ once: true }}
               variants={serviceItemVariants}
             >
-              <motion.div 
-                className="service-item flex flex-col items-center bg-gray-800 shadow-lg p-6 rounded-lg transition-all duration-500 hover:shadow-none"
-                whileHover={{ scale: 1.05 }}
-              >
+              <Parallax y={[-20, 20]} tagOuter="div">
                 <motion.div 
-                  className="service-icon text-white text-6xl mb-4"
-                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  className="service-item flex flex-col items-center bg-gray-800 shadow-lg p-6 rounded-lg transition-all duration-500 hover:shadow-none"
+                  whileHover={{ scale: 1.05 }}
                 >
-                  {service.icon}
+                  <motion.div 
+                    className="service-icon text-white text-6xl mb-4"
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                  >
+                    {service.icon}
+                  </motion.div>
+                  <div className="service-text text-center">
+                    <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                    <p className="text-base">{service.description}</p>
+                  </div>
                 </motion.div>
-                <div className="service-text text-center">
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-base">{service.description}</p>
-                </div>
-              </motion.div>
+              </Parallax>
             </motion.div>
           ))}
         </div>

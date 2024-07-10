@@ -13,9 +13,10 @@ import Team from './components/Team';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
+import { ParallaxProvider } from 'react-scroll-parallax';
 const App = () => {
   return (
+    <ParallaxProvider>
     <div>
       <NavBar />
       <Hero />
@@ -31,6 +32,7 @@ const App = () => {
       <Contact />
       <Footer />
     </div>
+    </ParallaxProvider>
   );
 }
 
