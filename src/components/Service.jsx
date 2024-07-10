@@ -3,13 +3,15 @@ import { FaLaptop, FaLaptopCode, FaAndroid, FaApple } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Parallax } from 'react-scroll-parallax';
 
+// Array of services with icons, titles, and descriptions
 const services = [
-  { icon: <FaLaptop />, title: 'Web Design', description: 'Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non' },
-  { icon: <FaLaptopCode />, title: 'Web Development', description: 'Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non' },
-  { icon: <FaAndroid />, title: 'Apps Design', description: 'Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non' },
-  { icon: <FaApple />, title: 'Apps Development', description: 'Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non' }
+  { icon: <FaLaptop />, title: 'Web Design', description: 'Creating visually appealing and user-friendly web designs.' },
+  { icon: <FaLaptopCode />, title: 'Web Development', description: 'Building responsive and dynamic websites using the latest technologies.' },
+  { icon: <FaAndroid />, title: 'Apps Design', description: 'Designing intuitive and engaging mobile app interfaces for Android.' },
+  { icon: <FaApple />, title: 'Apps Development', description: 'Developing high-performance mobile applications for iOS.' }
 ];
 
+// Animation variants for service items
 const serviceItemVariants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { 

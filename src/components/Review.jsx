@@ -5,6 +5,27 @@ import review1 from '../assets/img/testimonial-1.jpg';
 import review2 from '../assets/img/testimonial-2.jpg';
 import review3 from '../assets/img/testimonial-3.jpg';
 
+const reviews = [
+  {
+    image: review1,
+    text: "Working with this team was an absolute pleasure. They delivered the project on time and exceeded our expectations with their creativity and expertise.",
+    name: "Michael Brown",
+    profession: "CEO, Tech Innovators"
+  },
+  {
+    image: review2,
+    text: "Their attention to detail and commitment to excellence is unmatched. We were thoroughly impressed with the end product and their professionalism throughout the process.",
+    name: "Sarah Wilson",
+    profession: "Marketing Director, Creative Agency"
+  },
+  {
+    image: review3,
+    text: "The team demonstrated exceptional skills and knowledge in web development. Their solutions were innovative and they were always responsive to our needs.",
+    name: "David Lee",
+    profession: "CTO, Future Solutions"
+  }
+];
+
 const Review = () => {
   return (
     <div className="testimonial py-20 bg-black text-white" id="review">
@@ -20,7 +41,7 @@ const Review = () => {
           </motion.div>
         </Parallax>
         <div className="flex flex-wrap justify-center">
-          {[review1, review2, review3].map((review, index) => (
+          {reviews.map((review, index) => (
             <div key={index} className="w-full sm:w-1/2 md:w-1/3 p-4">
               <Parallax y={[10 * index, -10 * index]} tagOuter="div">
                 <motion.div 
@@ -30,12 +51,12 @@ const Review = () => {
                   transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
                 >
                   <div className="testimonial-img mx-auto mb-4 flex justify-center">
-                    <img src={review} alt={`Review ${index + 1}`} className="w-24 h-24 rounded-full border-4 border-dotted border-gray-400 p-2" />
+                    <img src={review.image} alt={`Review ${index + 1}`} className="w-24 h-24 rounded-full border-4 border-dotted border-gray-400 p-2" />
                   </div>
                   <div className="testimonial-text">
-                    <p className="text-xl italic mb-4 text-gray-400">Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.</p>
-                    <h3 className="text-2xl font-bold text-white mb-2">Customer Name</h3>
-                    <h4 className="text-lg text-gray-400">Profession</h4>
+                    <p className="text-xl italic mb-4 text-gray-400">{review.text}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{review.name}</h3>
+                    <h4 className="text-lg text-gray-400">{review.profession}</h4>
                   </div>
                 </motion.div>
               </Parallax>

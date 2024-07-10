@@ -7,10 +7,10 @@ import team3 from '../assets/img/team-3.png';
 import team4 from '../assets/img/team-4.png';
 
 const teamMembers = [
-  { name: 'Mollie Ross', role: 'Web Designer', image: team1 },
-  { name: 'Dylan Adams', role: 'Web Developer', image: team2 },
-  { name: 'Jennifer Page', role: 'Apps Designer', image: team3 },
-  { name: 'Josh Dunn', role: 'Apps Developer', image: team4 }
+  { name: 'Mollie Ross', role: 'Web Designer', image: team1, details: 'Expert in creating visually appealing and user-friendly web designs.' },
+  { name: 'Dylan Adams', role: 'Web Developer', image: team2, details: 'Specializes in building responsive and dynamic websites.' },
+  { name: 'Jennifer Page', role: 'Apps Designer', image: team3, details: 'Designs intuitive and engaging mobile app interfaces.' },
+  { name: 'Josh Dunn', role: 'Apps Developer', image: team4, details: 'Develops high-performance mobile applications.' },
 ];
 
 const Team = () => {
@@ -52,7 +52,7 @@ const Team = () => {
                   <div className="team-text">
                     <h2 className="text-xl font-bold text-white mb-2">{member.name}</h2>
                     <h4 className="text-lg font-semibold mb-4">{member.role}</h4>
-                    <p className="text-base mb-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan lacus eget velit tincidunt.</p>
+                    <p className="text-base mb-4 text-gray-400">{member.details}</p>
                     <div className="team-social flex justify-center space-x-2">
                       <a href="#" className="bg-gray-400 text-black p-2 rounded-full transition-all duration-300 hover:bg-transparent hover:text-white border border-gray-400"><i className="fab fa-twitter"></i></a>
                       <a href="#" className="bg-gray-400 text-black p-2 rounded-full transition-all duration-300 hover:bg-transparent hover:text-white border border-gray-400"><i className="fab fa-facebook-f"></i></a>
