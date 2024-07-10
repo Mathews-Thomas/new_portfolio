@@ -14,24 +14,28 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { AnimatePresence } from 'framer-motion';
+
 const App = () => {
   return (
     <ParallaxProvider>
-    <div>
-      <NavBar />
-      <Hero />
-      <About />
-      <Service />
-      <Experience />
-      <Banner />
-      <Portfolio />
-      <Price />
-      <Review />
-      <Team />
-      <Blog />
-      <Contact />
-      <Footer />
-    </div>
+      <AnimatePresence>
+        <div>
+          <NavBar />
+          <Hero />
+          <About />
+          <Service />
+          <Experience />
+          <Banner />
+          <Portfolio />
+          <Price />
+          <Review />
+          <Team />
+          <Blog />
+          <Contact />
+          <Footer />
+        </div>
+      </AnimatePresence>
     </ParallaxProvider>
   );
 }

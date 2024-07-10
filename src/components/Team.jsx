@@ -1,10 +1,10 @@
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { motion } from 'framer-motion';
-import team1 from '../assets/img/team-1.jpg';
-import team2 from '../assets/img/team-2.jpg';
-import team3 from '../assets/img/team-3.jpg';
-import team4 from '../assets/img/team-4.jpg';
+import team1 from '../assets/img/team-1.png';
+import team2 from '../assets/img/team-2.png';
+import team3 from '../assets/img/team-3.png';
+import team4 from '../assets/img/team-4.png';
 
 const teamMembers = [
   { name: 'Mollie Ross', role: 'Web Designer', image: team1 },
@@ -46,7 +46,7 @@ const Team = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
                 >
-                  <div className="team-img overflow-hidden rounded-full mb-4">
+                  <div className="team-img overflow-hidden rounded-full mb-4 w-40 h-40 mx-auto">
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110" />
                   </div>
                   <div className="team-text">
