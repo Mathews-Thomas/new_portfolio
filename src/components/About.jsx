@@ -56,7 +56,7 @@ const About = () => {
   };
 
   return (
-    <div className="about py-20 bg-gray-100" id="about">
+    <div className="about py-20 bg-black text-white" id="about">
       <div className="container mx-auto flex flex-col lg:flex-row items-center px-6">
         <motion.div 
           className="w-full lg:w-1/2 p-4 mb-8 lg:mb-0"
@@ -76,10 +76,10 @@ const About = () => {
         >
           <div className="section-header mb-6">
             <motion.p 
-              className="text-lg uppercase tracking-wide bg-white inline-block relative px-4 mb-4"
+              className="text-lg uppercase tracking-wide bg-white inline-block relative px-4 mb-4 text-black"
               variants={textVariants}
             >
-              <span className="absolute inset-0 h-0.5 bg-red-600 top-1/2 left-0"></span>
+              <span className="absolute inset-0 h-0.5 bg-white top-1/2 left-0"></span>
               Learn About Me
             </motion.p>
             <motion.h2 
@@ -110,9 +110,9 @@ const About = () => {
                   <motion.p variants={textVariants}>{skill.name}</motion.p>
                   <motion.p variants={textVariants}>{skill.percentage}%</motion.p>
                 </div>
-                <div className="w-full bg-gray-300 h-2 rounded-full">
+                <div className="w-full bg-gray-600 h-2 rounded-full">
                   <motion.div 
-                    className="bg-red-600 h-full rounded-full"
+                    className="bg-white h-full rounded-full"
                     custom={skill.percentage}
                     initial="hidden"
                     whileInView="visible"
@@ -124,7 +124,7 @@ const About = () => {
             ))}
           </div>
           <motion.a 
-            className="btn p-2 rounded-md bg-red-600 text-white hover:bg-transparent hover:text-red-600 border border-red-600 transition-all duration-300" 
+            className="btn p-2 rounded-md bg-white text-black hover:bg-transparent hover:text-white border border-white transition-all duration-300" 
             href="#contact"
             variants={textVariants}
           >

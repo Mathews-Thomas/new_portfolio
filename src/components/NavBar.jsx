@@ -9,7 +9,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navbar fixed top-0 w-full bg-white z-50 shadow-md">
+    <nav className="navbar fixed top-0 w-full bg-black z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         <a href="#home" className="text-2xl font-bold">
           {" "}
@@ -19,7 +19,7 @@ const NavBar = () => {
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="text-red-600"
+            className="text-white"
           >
             <path
               d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-2.83-.47-5.1-2.74-5.57-5.57H6v-2h1.43c.45-2.83 2.72-5.1 5.57-5.57V6h2v1.43c2.83.45 5.1 2.72 5.57 5.57H18v2h-1.43c-.45 2.83-2.72 5.1-5.57 5.57V18h-2v1.93zM12 8.5c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5S13.93 8.5 12 8.5zm0 5.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
@@ -30,10 +30,10 @@ const NavBar = () => {
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-gray-700 focus:outline-none"
+            className="text-white focus:outline-none"
           >
             <svg
-              className="w-8 h-8 text-red-600"
+              className="w-8 h-8 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -49,7 +49,7 @@ const NavBar = () => {
           </button>
         </div>
         <div
-          className={`fixed top-0 left-0 w-full h-full bg-white z-40 transition-transform transform ${
+          className={`fixed top-0 left-0 w-full h-full bg-black z-40 transition-transform transform ${
             isOpen ? "translate-y-0" : "-translate-y-full"
           } md:relative md:translate-y-0 md:flex md:items-center md:w-auto`}
         >
@@ -71,7 +71,7 @@ const NavBar = () => {
                 to={item}
                 smooth
                 duration={500}
-                className="block text-gray-700 hover:text-red-600 transition-colors hover:cursor-pointer px-2 py-1"
+                className="block text-white hover:text-gray-400 transition-colors hover:cursor-pointer px-2 py-1"
                 onClick={() => setIsOpen(false)}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}

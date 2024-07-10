@@ -23,10 +23,10 @@ const serviceItemVariants = {
 
 const Service = () => {
   return (
-    <div className="service py-20 bg-gray-100" id="service">
+    <div className="service py-20 bg-black text-white" id="service">
       <div className="container mx-auto text-center px-6">
-        <p className="text-lg uppercase tracking-wide bg-white inline-block relative px-4 mb-4">
-          <span className="absolute inset-0 h-0.5 bg-red-600 top-1/2 left-0"></span>
+        <p className="text-lg uppercase tracking-wide bg-white inline-block relative px-4 mb-4 text-black">
+          <span className="absolute inset-0 h-0.5 bg-white top-1/2 left-0"></span>
           What I do
         </p>
         <h2 className="text-4xl font-bold mb-10">Awesome Quality Services</h2>
@@ -41,11 +41,11 @@ const Service = () => {
               variants={serviceItemVariants}
             >
               <motion.div 
-                className="service-item flex flex-col items-center bg-white shadow-lg p-6 rounded-lg transition-all duration-500 hover:shadow-none"
+                className="service-item flex flex-col items-center bg-gray-800 shadow-lg p-6 rounded-lg transition-all duration-500 hover:shadow-none"
                 whileHover={{ scale: 1.05 }}
               >
                 <motion.div 
-                  className="service-icon text-red-600 text-6xl mb-4"
+                  className="service-icon text-white text-6xl mb-4"
                   whileHover={{ scale: 1.2, rotate: 10 }}
                 >
                   {service.icon}
