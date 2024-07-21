@@ -15,11 +15,19 @@ const Hero = () => {
       >
         <div className="container mx-auto flex flex-col lg:flex-row items-center px-6">
           <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
+          <motion.p 
+              className="text-2xl font-semibold"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 ,delay: 0.1}}
+            >
+              Hello,
+            </motion.p>
             <motion.p 
               className="text-2xl font-semibold"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 1 ,delay: 0.3 }}
             >
               I'm
             </motion.p>
@@ -64,7 +72,7 @@ const Hero = () => {
                 className="btn p-2 rounded-md bg-gray-900 hover:bg-gray-800 text-gray-400 border border-gray-700 transition-all duration-300 hover:bg-transparent hover:text-white"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 1.7 }}
+                transition={{ duration: 1, delay: 1.9 }}
               >
                 Download Cv
               </motion.a>

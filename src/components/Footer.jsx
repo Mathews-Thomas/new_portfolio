@@ -25,7 +25,7 @@ const Footer = () => {
           <a className="text-gray-400 bg-gray-900 border border-gray-700 hover:text-gray-700 rounded-md transition duration-300 p-2" href="https://instagram.com/_mathewsthomas_" aria-label="Instagram">
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
-          <a  className="text-gray-400 bg-gray-900 border border-gray-700 hover:text-gray-700 rounded-md transition duration-300 p-2" href="https:/linkedin.com/in/mathewsthomas" aria-label="LinkedIn">
+          <a  className="text-gray-400 bg-gray-900 border border-gray-700 hover:text-gray-700 rounded-md transition duration-300 p-2" href="https://linkedin.com/in/mathewsthomas" aria-label="LinkedIn">
             <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
           </a>
           <a className="text-gray-400 bg-gray-900 border border-gray-700 hover:text-gray-700 rounded-md transition duration-300 p-2" href="https://github.com/Mathews-Thomas" aria-label="Github">

@@ -20,9 +20,11 @@ export default {
       boxShadow: {
         custom: 'inset 0 0 0 50px #EF233C',
       },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      },
     },
   },
   variants: {},
   plugins: [],
 }
-
