@@ -1,6 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
+const MySwal = withReactContent(Swal);
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData({ ...formData, [id]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('https://sheetdb.io/api/v1/qzxax49umbzso', formData);
+      MySwal.fire({
+        title: 'Success!',
+        text: response.data.message,
+        icon: 'success',
+        confirmButtonText: 'Ok'
+      });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+      MySwal.fire({
+        title: 'Error!',
+        text: 'An error occurred. Please try again later.',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      });
+    }
+  };
+
   return (
     <div className="contact bg-gray-900 py-20" id="contact">
       <div className="container mx-auto px-6">
@@ -15,25 +54,57 @@ const Contact = () => {
             </svg>
           </div>
           <div className="w-full md:w-2/3 bg-gray-800 p-8 rounded-lg shadow-lg">
-            <form name="sentMessage" id="contactForm" noValidate>
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <input type="text" className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none" id="name" placeholder="Your Name" required data-validation-required-message="Please enter your name" />
-                <p className="help-block text-gray-400"></p>
+                <input
+                  type="text"
+                  id="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none"
+                  placeholder="Your Name"
+                  required
+                />
               </div>
               <div className="mb-4">
-                <input type="email" className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none" id="email" placeholder="Your Email" required data-validation-required-message="Please enter your email" />
-                <p className="help-block text-gray-400"></p>
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none"
+                  placeholder="Your Email"
+                  required
+                />
               </div>
               <div className="mb-4">
-                <input type="text" className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none" id="subject" placeholder="Subject" required data-validation-required-message="Please enter a subject" />
-                <p className="help-block text-gray-400"></p>
+                <input
+                  type="text"
+                  id="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none"
+                  placeholder="Subject"
+                  required
+                />
               </div>
               <div className="mb-4">
-                <textarea className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none" id="message" placeholder="Message" required data-validation-required-message="Please enter your message"></textarea>
-                <p className="help-block text-gray-400"></p>
+                <textarea
+                  id="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none"
+                  placeholder="Message"
+                  required
+                ></textarea>
               </div>
               <div>
-                <button className="btn bg-gray-800 text-gray-400 border border-gray-700 px-6 py-3 rounded-lg transition duration-300 hover:bg-gray-900 hover:text-gray-400" type="submit" id="sendMessageButton">Send Message</button>
+                <button
+                  className="btn bg-gray-800 text-gray-400 border border-gray-700 px-6 py-3 rounded-lg transition duration-300 hover:bg-gray-900 hover:text-gray-400"
+                  type="submit"
+                >
+                  Send Message
+                </button>
               </div>
             </form>
           </div>
@@ -41,6 +112,6 @@ const Contact = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Contact;
