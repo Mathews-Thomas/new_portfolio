@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   { date: '2024 - present', title: 'Software Developer', company: 'Ophize, Kochi India', description: 'Developed software for multiple clients including Ophize, Kochi India.' },
-  { date: '2022 - 2024', title: 'Junior Developer', company: 'Tech Solutions, Bangalore India', description: 'Assisted in developing and maintaining web applications for various clients.' },
-  { date: '2020 - 2022', title: 'Intern', company: 'InnovateX, Chennai India', description: 'Worked on several projects, gaining experience in full-stack development and collaborating with senior developers.' },
+  { date: '2022 - 2024', title: 'Mern Stack Intern', company: 'Aesthetix Edu-Tech, Kochi', description: 'Assisted in developing and maintaining web applications for various clients.' },
 ];
 
 const experienceVariants = {
@@ -22,16 +21,16 @@ const experienceVariants = {
 
 const Experience = () => {
   return (
-    <div className="experience py-20 bg-black text-white" id="experience">
+    <div className="experience py-20 bg-gray-900 text-gray-400" id="experience">
       <div className="container mx-auto px-6">
         <header className="section-header text-center mb-10">
           <motion.p 
-            className="text-lg uppercase tracking-wide bg-white inline-block relative px-4 mb-4 text-black"
+            className="text-lg uppercase tracking-wide bg-gray-800 inline-block relative px-4 mb-4 text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="absolute inset-0 h-0.5 bg-white top-1/2 left-0"></span>
+            <span className="absolute inset-0 h-0.5 bg-gray-800 top-1/2 left-0"></span>
             My Resume
           </motion.p>
           <motion.h2 

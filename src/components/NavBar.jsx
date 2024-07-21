@@ -9,7 +9,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navbar fixed top-0 w-full bg-black z-50 shadow-md">
+    <nav className="navbar fixed top-0 w-full bg-gray-800 z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         <a href="#home" className="text-2xl font-bold">
           {" "}
@@ -49,7 +49,7 @@ const NavBar = () => {
           </button>
         </div>
         <div
-          className={`fixed top-0 left-0 w-full h-full bg-black z-40 transition-transform transform ${
+          className={`fixed top-0 left-0 w-full h-full bg-gray-800 text-md font-semibold z-40 transition-transform transform ${
             isOpen ? "translate-y-0" : "-translate-y-full"
           } md:relative md:translate-y-0 md:flex md:items-center md:w-auto`}
         >
@@ -71,7 +71,7 @@ const NavBar = () => {
                 to={item}
                 smooth
                 duration={500}
-                className="block text-white hover:text-gray-400 transition-colors hover:cursor-pointer px-2 py-1"
+                className="block text-gray-400 hover:text-gray-200 transition-colors hover:cursor-pointer px-2 py-1"
                 onClick={() => setIsOpen(false)}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}

@@ -58,7 +58,7 @@ const About = () => {
   };
 
   return (
-    <div className="about py-20 bg-black text-white" id="about">
+    <div className="about py-20 bg-gray-900 text-gray-400" id="about">
       <div className="container mx-auto flex flex-col lg:flex-row items-center px-6">
         <motion.div 
           className="w-full lg:w-1/2 p-4 mb-8 lg:mb-0"
@@ -80,10 +80,10 @@ const About = () => {
         >
           <div className="section-header mb-6">
             <motion.p 
-              className="text-lg uppercase tracking-wide bg-white inline-block relative px-4 mb-4 text-black"
+              className="text-lg uppercase tracking-wide bg-gray-800 inline-block relative px-4 mb-4 text-gray-400"
               variants={textVariants}
             >
-              <span className="absolute inset-0 h-0.5 bg-white top-1/2 left-0"></span>
+              <span className="absolute inset-0 h-0.5 bg-gray-800 top-1/2 left-0"></span>
               Learn About Me
             </motion.p>
             <motion.h2 
@@ -94,13 +94,13 @@ const About = () => {
             </motion.h2>
           </div>
           <motion.p 
-            className="text-base mb-6"
+            className="text-md mb-6 font-semibold"
             variants={textVariants}
           >
             I am a passionate full-stack developer with expertise in the MERN stack (MongoDB, Express.js, React, Node.js). Over the past year, I have worked on various projects, building dynamic and responsive web applications. I love tackling complex problems and coming up with efficient solutions.
           </motion.p>
           <motion.p 
-            className="text-base mb-6"
+            className="text-md mb-6 font-semibold"
             variants={textVariants}
           >
             I have a strong background in both front-end and back-end development, and I am always eager to learn new technologies and improve my skills. My goal is to build scalable and maintainable applications that provide great user experiences.
@@ -122,7 +122,7 @@ const About = () => {
                 </div>
                 <div className="w-full bg-gray-600 h-2 rounded-full">
                   <motion.div 
-                    className="bg-white h-full rounded-full"
+                    className="bg-gray-400 h-full rounded-full"
                     custom={skill.percentage}
                     initial="hidden"
                     whileInView="visible"
@@ -134,7 +134,7 @@ const About = () => {
             ))}
           </div>
           <motion.a 
-            className="btn p-2 rounded-md bg-white text-black hover:bg-transparent hover:text-white border border-white transition-all duration-300" 
+            className="btn p-2 rounded-md bg-gray-900 hover:bg-gray-800 text-gray-400 hover:bg-transparent hover:text-white border border-gray-700 transition-all duration-300" 
             href="#contact"
             variants={textVariants}
           >

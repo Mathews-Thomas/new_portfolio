@@ -2,11 +2,11 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div className="contact bg-black py-20" id="contact">
+    <div className="contact bg-gray-900 py-20" id="contact">
       <div className="container mx-auto px-6">
         <div className="text-center mb-10">
-          <p className="text-lg uppercase tracking-wide text-white">Get In Touch</p>
-          <h2 className="text-4xl font-bold text-white">Contact Me</h2>
+          <p className="text-lg uppercase tracking-wide text-gray-400">Get In Touch</p>
+          <h2 className="text-4xl font-bold text-gray-400">Contact Me</h2>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center">
           <div className="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center text-white">
@@ -33,7 +33,7 @@ const Contact = () => {
                 <p className="help-block text-gray-400"></p>
               </div>
               <div>
-                <button className="btn bg-gray-400 text-black px-6 py-3 rounded-lg transition duration-300 hover:bg-gray-600 hover:text-white" type="submit" id="sendMessageButton">Send Message</button>
+                <button className="btn bg-gray-800 text-gray-400 border border-gray-700 px-6 py-3 rounded-lg transition duration-300 hover:bg-gray-900 hover:text-gray-400" type="submit" id="sendMessageButton">Send Message</button>
               </div>
             </form>
           </div>

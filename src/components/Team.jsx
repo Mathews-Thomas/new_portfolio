@@ -15,16 +15,16 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="team py-20 bg-black text-white" id="team">
+    <div className="team py-20 bg-gray-900 text-gray-400" id="team">
       <div className="container mx-auto text-center px-6">
         <Parallax y={[-20, 20]} tagOuter="div">
           <motion.p 
-            className="text-lg uppercase tracking-wide bg-white inline-block relative px-4 mb-4 text-black"
+            className="text-lg uppercase tracking-wide bg-gray-800 inline-block relative px-4 mb-4 text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <span className="absolute inset-0 h-0.5 bg-white top-1/2 left-0"></span>
+            <span className="absolute inset-0 h-0.5 bg-gray-800 top-1/2 left-0"></span>
             My Team
           </motion.p>
           <motion.h2 
@@ -47,7 +47,7 @@ const Team = () => {
                   transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
                 >
                   <div className="team-img overflow-hidden rounded-full mb-4 w-40 h-40 mx-auto">
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110" />
+                    <img src={member.image} alt={member.name} className="w-[5rem] h-[5rem] object-cover transform transition-transform duration-500 hover:scale-110" />
                   </div>
                   <div className="team-text">
                     <h2 className="text-xl font-bold text-white mb-2">{member.name}</h2>

@@ -26,10 +26,10 @@ const serviceItemVariants = {
 
 const Service = () => {
   return (
-    <div className="service py-20 bg-black text-white" id="service">
+    <div className="service py-20 bg-gray-900 text-gray-400" id="service">
       <div className="container mx-auto text-center px-6">
-        <p className="text-lg uppercase tracking-wide bg-white inline-block relative px-4 mb-4 text-black">
-          <span className="absolute inset-0 h-0.5 bg-white top-1/2 left-0"></span>
+        <p className="text-lg uppercase tracking-wide bg-gray-800 inline-block relative px-4 mb-4 text-gray-400">
+          <span className="absolute inset-0 h-0.5 bg-gray-800 top-1/2 left-0"></span>
           What I do
         </p>
         <h2 className="text-4xl font-bold mb-10">Awesome Quality Services</h2>

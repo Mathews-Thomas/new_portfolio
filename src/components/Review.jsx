@@ -28,7 +28,7 @@ const reviews = [
 
 const Review = () => {
   return (
-    <div className="testimonial py-20 bg-black text-white" id="review">
+    <div className="testimonial py-20 bg-gray-900 text-gray-400" id="review">
       <div className="container mx-auto text-center px-6">
         <Parallax y={[-20, 20]} tagOuter="div">
           <motion.div 
@@ -51,12 +51,12 @@ const Review = () => {
                   transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
                 >
                   <div className="testimonial-img mx-auto mb-4 flex justify-center">
-                    <img src={review.image} alt={`Review ${index + 1}`} className="w-24 h-24 rounded-full border-4 border-dotted border-gray-400 p-2" />
+                    <img src={review.image} alt={`Review ${index + 1}`} className="w-24 h-24 rounded-full border-4  border-gray-400 p-2" />
                   </div>
                   <div className="testimonial-text">
-                    <p className="text-xl italic mb-4 text-gray-400">{review.text}</p>
-                    <h3 className="text-2xl font-bold text-white mb-2">{review.name}</h3>
-                    <h4 className="text-lg text-gray-400">{review.profession}</h4>
+                    <p className="text-md italic mb-4 text-gray-400">{review.text}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">{review.name}</h3>
+                    <h4 className="text-md text-gray-400">{review.profession}</h4>
                   </div>
                 </motion.div>
               </Parallax>

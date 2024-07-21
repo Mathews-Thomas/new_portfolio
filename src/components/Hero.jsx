@@ -2,12 +2,14 @@ import React from 'react';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { motion } from 'framer-motion';
 import heroImage from '../assets/img/hero.png';
-
+import Resume from "../assets/img/My UpdatedResume.pdf"
 const Hero = () => {
+
+  const Skills = [' { Web Designer } ', ' { Web Developer } ', ' { Front End Developer } ', ' { Apps Designer } ', ' { Apps Developer } ']
   return (
     <ParallaxProvider>
       <div 
-        className="hero relative py-32 text-white bg-black bg-cover bg-center" 
+        className="hero relative py-32 text-gray-400 bg-gray-900 bg-cover bg-center" 
         id="home" 
         style={{ backgroundImage: `url('../assets/img/hero-bg.jpg')` }}
       >
@@ -22,7 +24,7 @@ const Hero = () => {
               I'm
             </motion.p>
             <motion.h1 
-              className="text-5xl font-bold mb-4"
+              className="text-6xl font-bold mb-4"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -30,17 +32,17 @@ const Hero = () => {
               Mathews Thomas
             </motion.h1>
             <motion.h2 
-              className="text-xl font-semibold mb-4"
+              className="text-lg font-semibold mb-4"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
             >
-              Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer
+              {Skills.map((i)=> i)}
             </motion.h2>
             <div className="flex justify-center lg:justify-start space-x-4 mt-6">
               <motion.a 
                 href="#contact" 
-                className="btn p-2 rounded-md bg-white text-black border border-white transition-all duration-300 hover:bg-transparent hover:text-white"
+                className="btn p-2 rounded-md bg-gray-900 hover:bg-gray-800 text-gray-400 border border-gray-700 transition-all duration-300 hover:bg-transparent hover:text-white"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.5 }}
@@ -49,12 +51,22 @@ const Hero = () => {
               </motion.a>
               <motion.a 
                 href="#contact" 
-                className="btn p-2 rounded-md bg-white text-black border border-white transition-all duration-300 hover:bg-transparent hover:text-white"
+                className="btn p-2 rounded-md bg-gray-900 hover:bg-gray-800 text-gray-400 border border-gray-700 transition-all duration-300 hover:bg-transparent hover:text-white"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.7 }}
               >
                 Contact Me
+              </motion.a>
+              <motion.a 
+                href={Resume} 
+                target='blank'
+                className="btn p-2 rounded-md bg-gray-900 hover:bg-gray-800 text-gray-400 border border-gray-700 transition-all duration-300 hover:bg-transparent hover:text-white"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 1.7 }}
+              >
+                Download Cv
               </motion.a>
             </div>
           </div>

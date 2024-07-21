@@ -8,30 +8,30 @@ const blogs = [
   {
     image: blog1,
     title: "The Future of Web Design",
-    author: "Admin",
-    category: "Web Design",
-    date: "01-Jan-2045",
-    comments: "5",
+    author: "",
+    category: "",
+    date: "",
+    comments: "",
     description: "Explore the latest trends and technologies shaping the future of web design. Learn how to create user-friendly and visually appealing websites that stand out."
   },
   {
     image: blog2,
     title: "Top Mobile App Design Tips",
-    author: "Admin",
-    category: "Apps Design",
-    date: "01-Jan-2045",
-    comments: "10",
+    author: "",
+    category: "",
+    date: "",
+    comments: "",
     description: "Discover essential tips for designing mobile apps that offer a seamless user experience. From navigation to aesthetics, find out how to make your app a hit."
   }
 ];
 
 const Blog = () => {
   return (
-    <div className="blog bg-black py-20" id="blog">
+    <div className="blog bg-gray-900 py-20" id="blog">
       <div className="container mx-auto text-center px-6">
         <Parallax y={[-20, 20]} tagOuter="div">
           <motion.p 
-            className="text-lg uppercase tracking-wide text-white mb-2"
+            className="text-lg uppercase tracking-wide text-gray-400 mb-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -39,7 +39,7 @@ const Blog = () => {
             From Blog
           </motion.p>
           <motion.h2 
-            className="text-4xl font-bold mb-10 text-white"
+            className="text-4xl font-bold mb-10 text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -75,7 +75,7 @@ const Blog = () => {
                 </div>
                 <p className="text-gray-400 mb-4">{blog.description}</p>
                 <a 
-                  className="btn bg-gray-400 text-black px-4 py-2 rounded mt-4 inline-block transition duration-300 hover:bg-gray-600 hover:text-white" 
+                  className="btn bg-gray-700 text-gray-400 px-4 py-2 rounded mt-4 inline-block transition duration-300 hover:bg-gray-800 border border-gray-600 hover:border-gray-600 hover:text-gray-400" 
                   href="#"
                 >
                   Read More <i className="fa fa-angle-right ml-2"></i>
