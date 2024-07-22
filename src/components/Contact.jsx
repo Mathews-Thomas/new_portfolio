@@ -23,8 +23,8 @@ const Contact = () => {
     try {
       const response = await axios.post('https://sheetdb.io/api/v1/qzxax49umbzso', formData);
       MySwal.fire({
-        title: 'Success!',
-        text: response.data.message,
+        title: 'Thank you For Your Message!',
+        text: "I'll get back to you as soon as I can.",
         icon: 'success',
         confirmButtonText: 'Ok'
       });
