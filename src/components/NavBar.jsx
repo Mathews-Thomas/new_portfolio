@@ -54,7 +54,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
           </button>
         </div>
         <div className={`fixed inset-0 z-40 bg-white dark:bg-gray-900 text-black dark:text-white flex flex-col items-center justify-center transform ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 md:hidden`}>
-          {["home", "about", "service", "experience", "portfolio", "review", "blog", "contact"].map((item) => (
+          {["home", "about", "service", "experience", "portfolio", "blog", "contact"].map((item) => (
             <Link
               key={item}
               to={item}
@@ -75,7 +75,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
         </div>
         <div className="hidden md:flex items-center space-x-4">
           <div className="flex space-x-4">
-            {["home", "about", "service", "experience", "portfolio", "review", "blog", "contact"].map((item) => (
+            {["home", "about", "service", "experience", "portfolio", "blog", "contact"].map((item) => (
               <Link
                 key={item}
                 to={item}
