@@ -41,19 +41,19 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact bg-gray-900 py-20" id="contact">
+    <div className="contact bg-white dark:bg-gray-900 py-20" id="contact">
       <div className="container mx-auto px-6">
         <div className="text-center mb-10">
-          <p className="text-lg uppercase tracking-wide text-gray-400">Get In Touch</p>
-          <h2 className="text-4xl font-bold text-gray-400">Contact Me</h2>
+          <p className="text-lg uppercase tracking-wide text-gray-600 dark:text-gray-400">Get In Touch</p>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-400">Contact Me</h2>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center">
-          <div className="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center text-white">
+          <div className="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center text-gray-900 dark:text-white">
             <svg width="200" height="200" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-2.83-.47-5.1-2.74-5.57-5.57H6v-2h1.43c.45-2.83 2.72-5.1 5.57-5.57V6h2v1.43c2.83.45 5.1 2.72 5.57 5.57H18v2h-1.43c-.45 2.83-2.72 5.1-5.57 5.57V18h-2v1.93zM12 8.5c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5S13.93 8.5 12 8.5zm0 5.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" fill="currentColor"/>
             </svg>
           </div>
-          <div className="w-full md:w-2/3 bg-gray-800 p-8 rounded-lg shadow-lg">
+          <div className="w-full md:w-2/3 bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <input
@@ -61,7 +61,7 @@ const Contact = () => {
                   id="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none"
+                  className="form-control w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-gray-600 dark:focus:border-gray-400 focus:outline-none bg-white dark:bg-gray-700"
                   placeholder="Your Name"
                   required
                 />
@@ -72,7 +72,7 @@ const Contact = () => {
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none"
+                  className="form-control w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-gray-600 dark:focus:border-gray-400 focus:outline-none bg-white dark:bg-gray-700"
                   placeholder="Your Email"
                   required
                 />
@@ -83,7 +83,7 @@ const Contact = () => {
                   id="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none"
+                  className="form-control w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-gray-600 dark:focus:border-gray-400 focus:outline-none bg-white dark:bg-gray-700"
                   placeholder="Subject"
                   required
                 />
@@ -93,14 +93,14 @@ const Contact = () => {
                   id="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="form-control w-full p-4 border border-gray-600 rounded-lg focus:border-gray-400 focus:outline-none"
+                  className="form-control w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-gray-600 dark:focus:border-gray-400 focus:outline-none bg-white dark:bg-gray-700"
                   placeholder="Message"
                   required
                 ></textarea>
               </div>
               <div>
                 <button
-                  className="btn bg-gray-800 text-gray-400 border border-gray-700 px-6 py-3 rounded-lg transition duration-300 hover:bg-gray-900 hover:text-gray-400"
+                  className="btn bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-400 border border-gray-300 dark:border-gray-600 px-6 py-3 rounded-lg transition duration-300 hover:bg-gray-400 dark:hover:bg-gray-900 hover:text-gray-800 dark:hover:text-gray-300"
                   type="submit"
                 >
                   Send Message

@@ -27,11 +27,11 @@ const blogs = [
 
 const Blog = () => {
   return (
-    <div className="blog bg-gray-900 py-20" id="blog">
+    <div className="blog bg-white dark:bg-gray-900 py-20 text-black dark:text-gray-400" id="blog">
       <div className="container mx-auto text-center px-6">
         <Parallax y={[-20, 20]} tagOuter="div">
           <motion.p 
-            className="text-lg uppercase tracking-wide text-gray-400 mb-2"
+            className="text-lg uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -39,7 +39,7 @@ const Blog = () => {
             From Blog
           </motion.p>
           <motion.h2 
-            className="text-4xl font-bold mb-10 text-gray-400"
+            className="text-4xl font-bold mb-10 text-gray-900 dark:text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -51,15 +51,15 @@ const Blog = () => {
           {blogs.map((blog, index) => (
             <motion.div 
               key={index} 
-              className="blog-item bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:-translate-y-2"
+              className="blog-item bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:-translate-y-2"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
             >
               <Parallax y={[10 * index, -10 * index]} tagOuter="div">
                 <img src={blog.image} alt={`Blog ${index + 1}`} className="w-full h-64 object-cover rounded mb-4" />
-                <h2 className="text-2xl font-bold mb-4 text-white">{blog.title}</h2>
-                <div className="blog-meta text-left mb-4 text-gray-400">
+                <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">{blog.title}</h2>
+                <div className="blog-meta text-left mb-4 text-gray-600 dark:text-gray-400">
                   <p className="flex items-center mb-2">
                     <i className="far fa-user mr-2"></i> {blog.author}
                   </p>
@@ -73,9 +73,9 @@ const Blog = () => {
                     <i className="far fa-comments mr-2"></i> {blog.comments}
                   </p>
                 </div>
-                <p className="text-gray-400 mb-4">{blog.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">{blog.description}</p>
                 <a 
-                  className="btn bg-gray-700 text-gray-400 px-4 py-2 rounded mt-4 inline-block transition duration-300 hover:bg-gray-800 border border-gray-600 hover:border-gray-600 hover:text-gray-400" 
+                  className="btn bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-gray-400 px-4 py-2 rounded mt-4 inline-block transition duration-300 hover:bg-gray-400 dark:hover:bg-gray-800 border border-gray-400 dark:border-gray-600 hover:border-gray-500 dark:hover:border-gray-700 hover:text-gray-800 dark:hover:text-gray-100" 
                   href="#"
                 >
                   Read More <i className="fa fa-angle-right ml-2"></i>

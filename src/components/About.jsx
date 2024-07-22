@@ -1,7 +1,6 @@
 import React from 'react';
 import aboutImage from '../assets/img/about.jpg';
 import { motion } from 'framer-motion';
-import { Parallax } from 'react-scroll-parallax';
 
 const About = () => {
   const skills = [
@@ -35,14 +34,11 @@ const About = () => {
     }
   };
 
-  const skillVariants = {
+  const skillBarVariants = {
     hidden: { width: 0 },
-    visible: (percentage) => ({ 
-      width: `${percentage}%`, 
-      transition: { 
-        duration: 1,
-        ease: 'easeInOut'
-      } 
+    visible: (percentage) => ({
+      width: `${percentage}%`,
+      transition: { duration: 1, ease: 'easeInOut' }
     })
   };
 
@@ -58,7 +54,7 @@ const About = () => {
   };
 
   return (
-    <div className="about py-20 bg-gray-900 text-gray-400" id="about">
+    <div className="about py-20 bg-white dark:bg-gray-900 text-black dark:text-gray-300" id="about">
       <div className="container mx-auto flex flex-col lg:flex-row items-center px-6">
         <motion.div 
           className="w-full lg:w-1/2 p-4 mb-8 lg:mb-0"
@@ -67,9 +63,11 @@ const About = () => {
           viewport={{ once: true }}
           variants={imageVariants}
         >
-          <Parallax y={[-20, 20]} tagOuter="figure">
-            <img src={aboutImage} alt="About" className="w-full h-auto object-cover rounded-lg shadow-lg" />
-          </Parallax>
+          <motion.img 
+            src={aboutImage} 
+            alt="About" 
+            className="w-full h-auto object-cover rounded-lg shadow-lg"
+          />
         </motion.div>
         <motion.div 
           className="w-full lg:w-1/2 p-4"
@@ -80,17 +78,17 @@ const About = () => {
         >
           <div className="section-header mb-6">
             <motion.p 
-              className="text-lg uppercase tracking-wide bg-gray-800 inline-block relative px-4 mb-4 text-gray-400"
+              className="text-lg uppercase tracking-wide bg-white dark:bg-gray-800 inline-block relative px-4 mb-4 text-black dark:text-gray-400"
               variants={textVariants}
             >
-              <span className="absolute inset-0 h-0.5 bg-gray-800 top-1/2 left-0"></span>
+              <span className="absolute inset-0 h-0.5 bg-white dark:bg-gray-800 top-1/2 left-0"></span>
               Learn About Me
             </motion.p>
             <motion.h2 
               className="text-4xl font-bold"
               variants={textVariants}
             >
-              1 Years Experience
+              1 Year Experience
             </motion.h2>
           </div>
           <motion.p 
@@ -114,27 +112,27 @@ const About = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={skill.percentage}
-                variants={skillVariants}
+                variants={containerVariants}
               >
                 <div className="flex justify-between mb-1">
                   <motion.p variants={textVariants}>{skill.name}</motion.p>
                   <motion.p variants={textVariants}>{skill.percentage}%</motion.p>
                 </div>
-                <div className="w-full bg-gray-600 h-2 rounded-full">
+                <div className="w-full bg-gray-300 dark:bg-gray-600 h-2 rounded-full">
                   <motion.div 
-                    className="bg-gray-400 h-full rounded-full"
+                    className="bg-black dark:bg-gray-400 h-full rounded-full"
                     custom={skill.percentage}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    variants={skillVariants}
+                    variants={skillBarVariants}
                   ></motion.div>
                 </div>
               </motion.div>
             ))}
           </div>
           <motion.a 
-            className="btn p-2 rounded-md bg-gray-900 hover:bg-gray-800 text-gray-400 hover:bg-transparent hover:text-white border border-gray-700 transition-all duration-300" 
+            className="btn p-2 rounded-md bg-black dark:bg-gray-700 hover:bg-gray-800 dark:hover:bg-gray-600 text-white dark:text-gray-300 hover:text-gray-900 border border-gray-700 dark:border-gray-600 transition-all duration-300" 
             href="#contact"
             variants={textVariants}
           >

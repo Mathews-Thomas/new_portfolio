@@ -26,10 +26,10 @@ const serviceItemVariants = {
 
 const Service = () => {
   return (
-    <div className="service py-20 bg-gray-900 text-gray-400" id="service">
+    <div className="service py-20 bg-white dark:bg-gray-900 text-black dark:text-gray-400" id="service">
       <div className="container mx-auto text-center px-6">
-        <p className="text-lg uppercase tracking-wide bg-gray-800 inline-block relative px-4 mb-4 text-gray-400">
-          <span className="absolute inset-0 h-0.5 bg-gray-800 top-1/2 left-0"></span>
+        <p className="text-lg uppercase tracking-wide bg-gray-200 dark:bg-gray-800 inline-block relative px-4 mb-4 text-gray-600 dark:text-gray-400">
+          <span className="absolute inset-0 h-0.5 bg-gray-200 dark:bg-gray-800 top-1/2 left-0"></span>
           What I do
         </p>
         <h2 className="text-4xl font-bold mb-10">Awesome Quality Services</h2>
@@ -45,11 +45,11 @@ const Service = () => {
             >
               <Parallax y={[-20, 20]} tagOuter="div">
                 <motion.div 
-                  className="service-item flex flex-col items-center bg-gray-800 shadow-lg p-6 rounded-lg transition-all duration-500 hover:shadow-none"
+                  className="service-item flex flex-col items-center bg-gray-100 dark:bg-gray-800 shadow-lg p-6 rounded-lg transition-all duration-500 hover:shadow-none"
                   whileHover={{ scale: 1.05 }}
                 >
                   <motion.div 
-                    className="service-icon text-white text-6xl mb-4"
+                    className="service-icon text-black dark:text-white text-6xl mb-4"
                     whileHover={{ scale: 1.2, rotate: 10 }}
                   >
                     {service.icon}
