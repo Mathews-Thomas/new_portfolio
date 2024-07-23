@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-
+import Dp from '../assets/img/mathews.jpg';
 const NavBar = ({ toggleDarkMode, darkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,19 +12,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
     <nav className="navbar fixed top-0 w-full bg-white dark:bg-gray-900 z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         <a href="#home" className="text-2xl font-bold text-black dark:text-white">
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-black dark:text-white"
-          >
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-2.83-.47-5.1-2.74-5.57-5.57H6v-2h1.43c.45-2.83 2.72-5.1 5.57-5.57V6h2v1.43c2.83.45 5.1 2.72 5.57 5.57H18v2h-1.43c-.45 2.83-2.72 5.1-5.57 5.57V18h-2v1.93zM12 8.5c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5S13.93 8.5 12 8.5zm0 5.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
-              fill="currentColor"
-            />
-          </svg>
+        <img src= {Dp} alt="Dp" className="w-10 h-10 rounded-full shadow-lg border-4" style={{ objectFit: 'cover' }}/>
         </a>
         <div className="flex items-center space-x-4 md:hidden">
           <button
