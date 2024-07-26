@@ -2,7 +2,7 @@ import React from 'react';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { motion } from 'framer-motion';
 import heroImage from '../assets/img/hero.png';
-import Resume from "../assets/img/My UpdatedResume.pdf";
+import Resume from "../assets/img/MathewsResume.pdf";
 import Dp from '../assets/img/mathews.jpg';
 const Hero = () => {
   const Skills = [' { Software Developer } ', ' { Web Developer } ', ' { Front End Developer } ', ' { Back End Developer } ', ' { Apps Developer } '];
