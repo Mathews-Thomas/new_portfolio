@@ -3,7 +3,7 @@ import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { motion } from 'framer-motion';
 import heroImage from '../assets/img/hero.png';
 import Resume from "../assets/img/MathewsResume.pdf";
-import Dp from '../assets/img/mathews.jpg';
+import Logo from '../assets/img/logo.png';
 const Hero = () => {
   const Skills = [' { Software Developer } ', ' { Web Developer } ', ' { Front End Developer } ', ' { Back End Developer } ', ' { Apps Developer } '];
 
@@ -73,7 +73,7 @@ const Hero = () => {
           </div>
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <Parallax y={[-20, 20]} tagOuter="figure">
-            <img src= {Dp} alt="Dp" className="w-48 h-48 rounded-full shadow-lg border-4" style={{ objectFit: 'cover' }}/>
+            <img src= {Logo} alt="Dp" className="w-48 h-48 rounded-full  border-1" style={{ objectFit: 'cover' }}/>
             </Parallax>
           </div>
         </div>
