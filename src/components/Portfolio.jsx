@@ -37,7 +37,7 @@ const Portfolio = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            My Excellent Portfolio
+            My Latest Projects
           </motion.h2>
         </Parallax>
         <ul className="flex flex-wrap justify-center mb-8">

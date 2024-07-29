@@ -49,7 +49,7 @@ const Contact = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center">
           <div className="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center text-gray-900 dark:text-white">
-            <img src= {Logo} alt="Dp" className="w-48 h-48 rounded-full border-1" style={{ objectFit: 'cover' }}/>
+            <img src= {Logo} alt="Dp" className="w-48 h-48 rounded-full border-1 shadow-2xl" style={{ objectFit: 'cover' }}/>
           </div>
           <div className="w-full md:w-2/3 bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
             <form onSubmit={handleSubmit}>

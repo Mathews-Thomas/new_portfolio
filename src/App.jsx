@@ -49,7 +49,7 @@ const App = () => {
           <Price />
           {/* <Review /> */}
           {/* <Team /> */}
-          <Blog />
+          {/* <Blog /> */}
           <Contact />
           <Footer />
         </div>

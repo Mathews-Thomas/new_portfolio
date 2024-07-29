@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutImage from '../assets/img/about.jpg';
+import aboutImage from '../assets/img/avathar-removebg.png';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -66,7 +66,7 @@ const About = () => {
           <motion.img 
             src={aboutImage} 
             alt="About" 
-            className="w-full h-auto object-cover rounded-lg shadow-lg"
+            className="w-full h-auto object-cover rounded-lg"
           />
         </motion.div>
         <motion.div 
