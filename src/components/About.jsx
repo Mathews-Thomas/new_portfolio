@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutImage from '../assets/img/avathar-removebg.png';
+import aboutImage from '../assets/img/about.jpg';
 import { motion } from 'framer-motion';
 
 const About = () => {
