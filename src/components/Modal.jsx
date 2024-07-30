@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import withReactContent from 'sweetalert2-react-content';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { toast, Toaster } from 'react-hot-toast';
 
 const MySwal = withReactContent(Swal);
 
@@ -21,6 +22,13 @@ const Modal = ({ showModal, setShowModal }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    MySwal.fire({
+      title: 'Submitting...',
+      didOpen: () => {
+        MySwal.showLoading();
+      },
+    });
+
     try {
       await axios.post('https://sheetdb.io/api/v1/ux2prj8f85wyz', formData);
       MySwal.fire({
@@ -44,6 +52,7 @@ const Modal = ({ showModal, setShowModal }) => {
 
   return (
     <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex justify-center items-center z-50">
+      <Toaster />
       <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-11/12 md:w-1/3 relative">
         <button 
           className="absolute top-4 right-4 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none"

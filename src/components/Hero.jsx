@@ -73,7 +73,7 @@ const Hero = () => {
           </div>
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <Parallax y={[-20, 20]} tagOuter="figure">
-            <img src= {Logo} alt="Dp" className="w-48 h-48 rounded-full shadow-2xl" style={{ objectFit: 'cover' }}/>
+            <img src= {Logo} alt="Dp" className="w-48 h-48 rounded-full shadow-2xl dark:bg-gray-400 bg-white" style={{ objectFit: 'cover' }}/>
             </Parallax>
           </div>
         </div>

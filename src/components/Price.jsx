@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Modal from './Modal';
 
 const Price = () => {
@@ -74,7 +74,19 @@ const Price = () => {
           ))}
         </div>
       </div>
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <AnimatePresence>
+        {showModal && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center"
+          >
+            <Modal showModal={showModal} setShowModal={setShowModal} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
