@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   { date: '2024 - present', title: 'Software Developer', company: 'Ophize, Kochi India', description: 'Developed software for multiple clients including Ophize, Kochi India.' },
-  { date: '2022 - 2024', title: 'Mern Stack Intern', company: 'Aesthetix Edu-Tech, Kochi', description: 'Assisted in developing and maintaining web applications for various clients.' },
+  { date: '2023 - 2024', title: 'Mern Stack Intern', company: 'Aesthetix Edu-Tech, Kochi', description: 'Assisted in developing and maintaining web applications for various clients.' },
 ];
 
 const containerVariants = {

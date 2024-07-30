@@ -136,7 +136,7 @@ const About = () => {
             href="#contact"
             variants={textVariants}
           >
-            Learn More
+            More
           </motion.a>
         </motion.div>
       </div>
