@@ -92,13 +92,13 @@ const About = () => {
             </motion.h2>
           </div>
           <motion.p 
-            className="text-md mb-6 font-semibold"
+            className="text-base mb-6 "
             variants={textVariants}
           >
             I am a passionate full-stack developer with expertise in the MERN stack (MongoDB, Express.js, React, Node.js). Over the past year, I have worked on various projects, building dynamic and responsive web applications. I love tackling complex problems and coming up with efficient solutions.
           </motion.p>
           <motion.p 
-            className="text-md mb-6 font-semibold"
+            className="text-base mb-6 "
             variants={textVariants}
           >
             I have a strong background in both front-end and back-end development, and I am always eager to learn new technologies and improve my skills. My goal is to build scalable and maintainable applications that provide great user experiences.

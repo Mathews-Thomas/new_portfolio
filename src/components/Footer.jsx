@@ -12,7 +12,7 @@ const Footer = () => {
           <p className="text-md">+91 7736790251</p>
           <p className="text-md">mathewsxo@gmail.com</p>
         </div>
-        <div className="footer-social mb-6 flex justify-center space-x-4 flex-wrap gap-6">
+        <div className="footer-social mb-6 flex justify-center space-x-4 flex-wrap gap-2">
           <a className="text-gray-900 dark:text-gray-400 bg-gray-300 dark:bg-gray-900 border border-gray-700 hover:text-gray-700 dark:hover:text-gray-200 rounded-md transition duration-300 p-2" href="https://twitter.com/" aria-label="Twitter">
             <FontAwesomeIcon icon={faTwitter} size="2x" />
           </a>
