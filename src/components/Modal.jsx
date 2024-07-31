@@ -15,13 +15,36 @@ const Modal = ({ showModal, setShowModal }) => {
     service: 'Select a Service',
   });
 
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    service: ''
+  });
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
+    setErrors({ ...errors, [id]: '' });
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.email) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Email address is invalid';
+    }
+    if (formData.service === 'Select a Service') newErrors.service = 'Please select a service';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
+
     MySwal.fire({
       title: 'Submitting...',
       didOpen: () => {
@@ -72,6 +95,7 @@ const Modal = ({ showModal, setShowModal }) => {
               type="text" 
               placeholder="Your Name" 
             />
+            {errors.name && <p className="text-red-500 mt-1">{errors.name}</p>}
           </div>
           <div className="mb-6">
             <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="email">Email</label>
@@ -83,6 +107,7 @@ const Modal = ({ showModal, setShowModal }) => {
               type="email" 
               placeholder="Your Email" 
             />
+            {errors.email && <p className="text-red-500 mt-1">{errors.email}</p>}
           </div>
           <div className="mb-6">
             <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="service">Service</label>
@@ -97,6 +122,7 @@ const Modal = ({ showModal, setShowModal }) => {
               <option value="High-Level Website">High-Level Website</option>
               <option value="Software Development">Software Development</option>
             </select>
+            {errors.service && <p className="text-red-500 mt-1">{errors.service}</p>}
           </div>
           <div className="flex items-center justify-between">
             <button 
