@@ -11,8 +11,8 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
   return (
     <nav className="navbar fixed top-0 w-full bg-white dark:bg-gray-900 z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
-        <a href="#home" className="text-2xl font-bold text-black dark:text-white">
-        <img src= {Logo} alt="Dp" className="w-10 h-10 rounded-full shadow-2xl  dark:bg-gray-400 bg-white" style={{ objectFit: 'cover' }}/>
+        <a href="#home" className="text-2xl font-bold">
+        <img src= {Logo} alt="Dp" className="w-10 h-10 rounded-full shadow-2xl " style={{ objectFit: 'cover' }}/>
         </a>
         <div className="flex items-center space-x-4 md:hidden">
           <button
