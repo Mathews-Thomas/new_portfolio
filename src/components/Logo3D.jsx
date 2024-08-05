@@ -28,11 +28,11 @@ const Logo = () => {
 
 const Logo3D = () => {
   return (
-    <Canvas className="w-full h-full" style={{ objectFit: 'cover', width: '300px', height: '300px' }}>
+    <Canvas className="w-full h-full " style={{ objectFit: 'cover', width: '250px', height: '250px' }}>
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
-      <React.Suspense fallback={null}>
-        <Logo className="w-full h-full" />
+      <React.Suspense fallback={null} >
+        <Logo className="w-full h-full rounded-full shadow-2xl"/>
       </React.Suspense>
       <OrbitControls enableZoom={false} />
     </Canvas>
