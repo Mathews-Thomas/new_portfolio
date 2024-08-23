@@ -7,8 +7,8 @@ const Logo = () => {
   const logoRef = useRef();
 
   // Load textures for the front and back logos
-  const frontTexture = useTexture('/logo.png'); // Front logo texture
-  const backTexture = useTexture('/mathews copy.png'); // Back logo texture
+  const frontTexture = useTexture('/mathews.png'); // Front logo texture
+  const backTexture = useTexture('/logo copy.png'); // Back logo texture
 
   frontTexture.onError = () => {
     console.error("Could not load front texture");
@@ -39,17 +39,17 @@ const Logo = () => {
   );
 };
 
-const Logo3D = () => {
+const Dp3D = () => {
   return (
     <Canvas className="w-full h-full" style={{ objectFit: 'cover', width: '250px', height: '250px' }}>
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
       <React.Suspense fallback={null}>
-        <Logo className="w-full h-full rounded-full shadow-2xl" />
+        <Logo className="w-full h-full rounded-full shadow-2xl bg-black" />
       </React.Suspense>
       <OrbitControls enableZoom={false} />
     </Canvas>
   );
 };
 
-export default Logo3D;
+export default Dp3D;

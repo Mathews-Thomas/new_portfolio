@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast, Toaster } from 'react-hot-toast';
 import Logo from '../assets/img/logo.png';
-import Logo3D from './Logo3D';
+import Dp3D from './Dp3D';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { motion } from 'framer-motion';
 const Contact = () => {
@@ -48,7 +48,7 @@ const Contact = () => {
         <div className="flex flex-col md:flex-row justify-center items-center">
           <div className="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center text-gray-900 dark:text-white">
           <Parallax y={[-30, 30]} tagOuter="figure" >
-              <Logo3D  />
+              <Dp3D />
             </Parallax>
           </div>
           <div className="w-full md:w-2/3 bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
