@@ -6,7 +6,7 @@ import Resume from "../assets/img/MathewsResume.pdf";
 import Logo3D from './Logo3D';
 
 const Hero = () => {
-  const Skills = [' { Software Developer } ', ' { Web Developer } ', ' { Front End Developer } ', ' { Back End Developer } ', ' { Apps Developer } '];
+  const Skills = [' { Innovative Problem Solver } ', ' { Full Stack Web Developer } ', ' { UI/UX Enthusiast } ', ' { API Integrator} ', ' { Mobile App Developer } '];
 
   return (
     <ParallaxProvider>
@@ -43,9 +43,10 @@ const Hero = () => {
                 <span key={index}>{skill}</span>
               ))}
             </motion.h2>
+            
             <div className="flex justify-center lg:justify-start space-x-4 mt-6">
               <motion.a
-                href="#contact"
+                href="#services"
                 className="btn p-2 rounded-md bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-400 border border-gray-300 dark:border-gray-700 transition-all duration-300 hover:bg-transparent hover:text-black dark:hover:text-white"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -70,7 +71,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.9 }}
               >
-                Download Cv
+                View Resume
               </motion.a>
             </div>
           </div>
