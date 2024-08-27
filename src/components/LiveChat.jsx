@@ -33,7 +33,7 @@ const LiveChat = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 50 }}
       transition={{ duration: 0.5 }}
-      className="fixed bottom-5 right-5 z-50"
+      className="fixed bottom-5 right-5 hidden"
     >
       {isLoaded && (
         <div id="tawkToWidgetContainer" className='bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-3'>
