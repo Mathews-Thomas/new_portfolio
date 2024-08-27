@@ -23,7 +23,7 @@ const Hero = () => {
       {skills.map((skill, index) => (
         <motion.span
           key={index}
-          className="block text-lg md:text-xl font-semibold tracking-wider text-gray-900 dark:text-gray-300"
+          className="block text-lg md:text-xl font-semibold tracking-wider text-gray-300 dark:text-gray-300"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.7 + index * 0.2 }}
@@ -73,11 +73,11 @@ const Hero = () => {
         </video>) : null}
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-200 dark:to-gray-900 opacity-80 z-1"></div>
+        <div className="absolute inset-0 bg-black opacity-70 z-1"></div>
         {/* Content */}
         <div className="container relative z-10 text-center px-4 sm:px-6 lg:px-12">
           <motion.p
-            className="text-3xl md:text-4xl font-bold tracking-widest text-gray-900 dark:text-gray-300"
+            className="text-3xl md:text-4xl font-bold tracking-widest text-gray-300 dark:text-gray-300"
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -85,7 +85,7 @@ const Hero = () => {
             Hello, I'm
           </motion.p>
           <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-extrabold mt-4 mb-6 md:mb-8 text-gray-900 dark:text-gray-300"
+            className="text-5xl md:text-7xl lg:text-8xl font-extrabold mt-4 mb-6 md:mb-8 text-gray-300 dark:text-gray-300"
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -93,7 +93,7 @@ const Hero = () => {
             Mathews Thomas
           </motion.h1>
           <motion.div
-            className="mb-8 md:mb-12"
+            className="mb-8 md:mb-12 "
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
