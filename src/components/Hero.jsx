@@ -1,89 +1,112 @@
-// src/components/Hero.jsx
 import React from 'react';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { motion } from 'framer-motion';
 import Resume from "../assets/img/MathewsResume.pdf";
-import Logo3D from './Logo3D';
-
+import Herovideo from "../assets/videos/hero-bg.mp4";
+import { useEffect, useState } from 'react';
 const Hero = () => {
-  const Skills = [' { Innovative Problem Solver } ', ' { Full Stack Web Developer } ', ' { UI/UX Enthusiast } ', ' { API Integrator} ', ' { Mobile App Developer } '];
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const skills = [
+    'Innovative Problem Solver',
+    'Full Stack Web Developer',
+    'UI/UX Enthusiast',
+    'API Integrator',
+    'Mobile App Developer'
+  ];
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVideoLoaded(true), 3000); // Delay loading the video by 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  const renderSkills = () => (
+    <div className="space-y-2">
+      {skills.map((skill, index) => (
+        <motion.span
+          key={index}
+          className="block text-lg md:text-xl font-semibold tracking-wider text-gray-900 dark:text-gray-300"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 + index * 0.2 }}
+        >
+          {`{ ${skill} }`}
+        </motion.span>
+      ))}
+    </div>
+  );
+
+  const renderButtons = () => {
+    const buttons = [
+      { href: '#services', label: 'Hire Me', delay: 1.5 },
+      { href: '#contact', label: 'Contact Me', delay: 1.7 },
+      { href: Resume, label: 'View Resume', delay: 1.9, target: '_blank' }
+    ];
+
+    return buttons.map((button, index) => (
+      <motion.a
+        key={index}
+        href={button.href}
+        target={button.target || '_self'}
+        className="btn px-4 py-2 md:px-6 md:py-3 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-300 font-bold shadow-lg transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-500 focus:ring-opacity-50"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: button.delay }}
+      >
+        {button.label}
+      </motion.a>
+    ));
+  };
 
   return (
     <ParallaxProvider>
-      <div
-        className="hero relative py-32 text-gray-900 dark:text-gray-400 bg-white dark:bg-gray-900 bg-cover bg-center"
-        id="home"
-        style={{ backgroundImage: `url('../assets/img/hero-bg.jpg')` }}
-      >
-        <div className="container mx-auto flex flex-col lg:flex-row items-center px-6">
-          <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
-            <motion.p
-              className="text-2xl font-semibold"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-            >
-              Hello, I'm
-            </motion.p>
-            <motion.h1
-              className="md:text-6xl text-4xl font-bold mb-4"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
-            >
-              Mathews Thomas
-            </motion.h1>
-            <motion.h2
-              className="text-lg font-semibold mb-4"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1 }}
-            >
-              {Skills.map((skill, index) => (
-                <span key={index}>{skill}</span>
-              ))}
-            </motion.h2>
-            
-            <div className="flex justify-center lg:justify-start space-x-4 mt-6">
-              <motion.a
-                href="#services"
-                className="btn p-2 rounded-md bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-400 border border-gray-300 dark:border-gray-700 transition-all duration-300 hover:bg-transparent hover:text-black dark:hover:text-white"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 1.5 }}
-              >
-                Hire Me
-              </motion.a>
-              <motion.a
-                href="#contact"
-                className="btn p-2 rounded-md bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-400 border border-gray-300 dark:border-gray-700 transition-all duration-300 hover:bg-transparent hover:text-black dark:hover:text-white"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 1.7 }}
-              >
-                Contact Me
-              </motion.a>
-              <motion.a
-                href={Resume}
-                target="_blank"
-                className="btn p-2 rounded-md bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-400 border border-gray-300 dark:border-gray-700 transition-all duration-300 hover:bg-transparent hover:text-black dark:hover:text-white"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 1.9 }}
-              >
-                View Resume
-              </motion.a>
-            </div>
-          </div>
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end ">
-            <Parallax y={[-30, 30]} tagOuter="figure" >
-              <Logo3D  />
-            </Parallax>
+      <div className="hero relative min-h-screen flex flex-col justify-center items-center text-gray-900 dark:text-gray-300 bg-no-repeat" id="home">
+        {/* Background Video */}
+        {isVideoLoaded ? (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+           preload="none"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src={Herovideo}  type="video/mp4" />
+        </video>) : null}
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-200 dark:to-gray-900 opacity-80 z-1"></div>
+        {/* Content */}
+        <div className="container relative z-10 text-center px-4 sm:px-6 lg:px-12">
+          <motion.p
+            className="text-3xl md:text-4xl font-bold tracking-widest text-gray-900 dark:text-gray-300"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            Hello, I'm
+          </motion.p>
+          <motion.h1
+            className="text-5xl md:text-7xl lg:text-8xl font-extrabold mt-4 mb-6 md:mb-8 text-gray-900 dark:text-gray-300"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            Mathews Thomas
+          </motion.h1>
+          <motion.div
+            className="mb-8 md:mb-12"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            {renderSkills()}
+          </motion.div>
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-6 md:mt-10">
+            {renderButtons()}
           </div>
         </div>
       </div>
     </ParallaxProvider>
   );
-}
+};
 
 export default Hero;
