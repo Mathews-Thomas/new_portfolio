@@ -14,7 +14,7 @@ const Hero = () => {
     'Mobile App Developer'
   ];
   useEffect(() => {
-    const timer = setTimeout(() => setIsVideoLoaded(true), 2000); // Delay loading the video by 3 seconds
+    const timer = setTimeout(() => setIsVideoLoaded(true), 100); // Delay loading the video by 3 seconds
     return () => clearTimeout(timer);
   }, []);
 
