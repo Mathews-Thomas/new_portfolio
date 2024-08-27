@@ -14,7 +14,7 @@ const Hero = () => {
     'Mobile App Developer'
   ];
   useEffect(() => {
-    const timer = setTimeout(() => setIsVideoLoaded(true), 3000); // Delay loading the video by 3 seconds
+    const timer = setTimeout(() => setIsVideoLoaded(true), 2000); // Delay loading the video by 3 seconds
     return () => clearTimeout(timer);
   }, []);
 
@@ -72,7 +72,7 @@ const Hero = () => {
         </video>) : null}
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-70 z-1"></div>
+        <div className="absolute inset-0  z-1"></div>
         {/* Content */}
         <div className="container relative z-10 text-center px-4 sm:px-6 lg:px-12">
           <motion.p

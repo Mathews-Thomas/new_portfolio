@@ -1,15 +1,39 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import Logo from '../assets/img/logo.png';
+import { useEffect } from "react";
 const NavBar = ({ toggleDarkMode, darkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [showNavbar, setShowNavbar] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        setShowNavbar(true); // Show the navbar when scrolling down
+      } else {
+        setShowNavbar(false); // Hide the navbar when at the top
+      }
+      setLastScrollY(window.scrollY);
+    }
+  }
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      // Cleanup on unmount
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
   return (
-    <nav className="navbar fixed top-0 w-full bg-white dark:bg-gray-900 z-50 shadow-md">
+    <nav className={`navbar fixed top-0 w-full bg-white dark:bg-gray-900 z-50 shadow-md ${showNavbar ? "block" : "hidden"}`}>
       <div className="container mx-auto flex justify-between items-center p-4">
         <a href="#home" className="text-2xl font-bold">
         <img src= {Logo} alt="Dp" className="w-10 h-10 rounded-full shadow-2xl" style={{ objectFit: 'cover' }}/>
