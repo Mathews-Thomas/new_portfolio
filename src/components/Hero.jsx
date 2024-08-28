@@ -68,6 +68,7 @@ const Hero = () => {
           muted
           playsInline
           preload="auto"
+          onLoadedMetadata={() => setIsVideoLoaded(true)}
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
           <source src={Herovideosm} type="video/mp4" media="(max-width: 768px)" />
