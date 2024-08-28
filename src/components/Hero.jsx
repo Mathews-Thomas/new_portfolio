@@ -5,6 +5,7 @@ import Resume from "../assets/img/MathewsResume.pdf";
 import Herovideo from "../assets/videos/hero-bg.mp4";
 import Herovideosm from "../assets/videos/hero-bg-sm.mp4";
 import { useEffect, useState } from 'react';
+import poster from "../assets/img/poster-image.jpeg"; 
 const Hero = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const skills = [
@@ -68,6 +69,7 @@ const Hero = () => {
           muted
           playsInline
           preload="auto"
+          poster={poster}
           onLoadedMetadata={() => setIsVideoLoaded(true)}
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
