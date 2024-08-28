@@ -3,6 +3,7 @@ import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { motion } from 'framer-motion';
 import Resume from "../assets/img/MathewsResume.pdf";
 import Herovideo from "../assets/videos/hero-bg.mp4";
+import Herovideosm from "../assets/videos/hero-bg-sm.mp4";
 import { useEffect, useState } from 'react';
 const Hero = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -14,7 +15,7 @@ const Hero = () => {
     'Mobile App Developer'
   ];
   useEffect(() => {
-    const timer = setTimeout(() => setIsVideoLoaded(true), 100); // Delay loading the video by 3 seconds
+    const timer = setTimeout(() => setIsVideoLoaded(true), 0); // Delay loading the video to improve initial page load
     return () => clearTimeout(timer);
   }, []);
 
@@ -66,9 +67,11 @@ const Hero = () => {
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
-          <source src={Herovideo}  type="video/mp4" />
+          <source src={Herovideosm} type="video/mp4" media="(max-width: 768px)" />
+          <source src={Herovideo}  type="video/mp4" media="(min-width: 769px)"/>
         </video>) : null}
 
         {/* Overlay */}
