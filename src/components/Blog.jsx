@@ -27,7 +27,7 @@ const blogs = [
 
 const Blog = () => {
   return (
-    <div className="blog bg-white dark:bg-gray-900 py-20 text-black dark:text-gray-400" id="blog">
+    <div className="blog bg-white dark:bg-black py-20 text-black dark:text-gray-400" id="blog">
       <div className="container mx-auto text-center px-6">
         <Parallax y={[-20, 20]} tagOuter="div">
           <motion.p 

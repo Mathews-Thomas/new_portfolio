@@ -26,7 +26,7 @@ const serviceItemVariants = {
 
 const Service = () => {
   return (
-    <div className="service py-20 bg-white dark:bg-gray-900 text-black dark:text-gray-400" id="service">
+    <div className="service py-20  bg-white dark:bg-gray-900 text-black dark:text-gray-400" id="service">
       <div className="container mx-auto text-center px-6">
         <p className="text-lg uppercase tracking-wide bg-gray-200 dark:bg-gray-800 inline-block relative px-4 mb-4 text-gray-600 dark:text-gray-400">
           <span className="absolute inset-0 h-0.5 bg-gray-200 dark:bg-gray-800 top-1/2 left-0"></span>
