@@ -88,7 +88,7 @@ const About = () => {
               className="text-4xl font-bold"
               variants={textVariants}
             >
-              1 Year Experience
+              2 Year Experience
             </motion.h2>
           </div>
           <motion.p 
