@@ -9,7 +9,6 @@ import poster from "../assets/img/poster-image.jpeg";
 const Hero = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const skills = [
-    'Innovative Problem Solver',
     'Full Stack Web Developer',
     'UI/UX Enthusiast',
     'API Integrator',
